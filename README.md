@@ -55,7 +55,7 @@ URGENT! THE MAIN NODE HAS GONE OFFLINE! IT HAPPENED ON: Sat May 01 2021 16:32:40
     "resent_update": "Sat May 01 2021 17:13:16 GMT+0700 (Красноярск, стандартное время)",
     "status": "All nodes are online",
     "nodes_offline": null,
-    "is_same_hash": "Some nodes have different hashes",
+    "is_same_hash": false,
     "hash_value": "Hash is different among modes",
     "different_hashes": {
         "3afe49bb2463b30510dd24aba24172330f4b6b4168fc006457ac21e07828b1fa": [
@@ -68,7 +68,7 @@ URGENT! THE MAIN NODE HAS GONE OFFLINE! IT HAPPENED ON: Sat May 01 2021 16:32:40
             "64.235.45.119:38081"
         ]
     },
-    "is_same_height": "Nodes have different heights now",
+    "is_same_height": false,
     "height_value": "Nodes have different heights nows",
     "different_heights": {
         "1157233": [
