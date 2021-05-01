@@ -98,7 +98,7 @@ URGENT! THE MAIN NODE HAS GONE OFFLINE! IT HAPPENED ON: Sat May 01 2021 16:32:40
 
 `starter.js` — скрип для интервальной проверки нод
 
-Папка 'src':
+Папка `src`:
 
 `App.js` — описание основных параметров сервера
 
