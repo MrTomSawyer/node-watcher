@@ -14,7 +14,6 @@ const functions = {
         const data_list = data.map(node => node.response?.result[0].hash)
         const hash_list = data_list.filter(hash => hash !== undefined)
     
-        console.log('@@@@@ w', hash_list)
         const is_same_hash = new Set(hash_list).size === 1;
         
         if(is_same_hash) return { is_same_hash: true, hash_value: hash_list[0]}
@@ -35,8 +34,9 @@ const functions = {
     },
 
     compareHeight(data) {
-        const height_list = data.map(node => node.response?.result[0].height)
-    
+        const data_list = data.map(node => node.response?.result[0].height)
+        const height_list = data_list.filter(height => height !== undefined)
+
         const is_same_height = new Set(height_list).size === 1;
     
         if(is_same_height) return { is_same_height: true, height_value: height_list[0] }
