@@ -29,8 +29,10 @@ Nodes status:  {
   status: 'All nodes are online',
   nodes_offline: null,
   is_same_hash: 'All nodes have the same hash',
+  "hash_value": "8b8ff0bd0d2b563d8ae9dcc8ee07d12d55b29f5dfe6a073602ef6375a133a60a",
   different_hashes: null,
   is_same_height: 'All nodes have the same height',
+  "height_value": 1157245,
   different_heights: null
 }
 ```
