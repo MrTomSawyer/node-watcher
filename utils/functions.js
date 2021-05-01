@@ -11,15 +11,19 @@ const functions = {
 
     // Возвращает объект со статусом true если хэши всех нод совпали. Если нет, вернет объект с false и объект вида { хэш : массив нод } с таким хэшем
     compareHash(data) {
-        const hash_list = data.map(node => node.response?.result[0].hash)
+        const data_list = data.map(node => node.response?.result[0].hash)
+        const hash_list = data_list.filter(hash => hash !== undefined)
     
+        console.log('@@@@@ w', hash_list)
         const is_same_hash = new Set(hash_list).size === 1;
-    
+        
         if(is_same_hash) return { is_same_hash: true, hash_value: hash_list[0]}
     
         let hash_stat = {}
     
         data.forEach(node => {
+            if(node.response?.result[0]?.hash === undefined) return
+
             if(!hash_stat[node.response?.result[0].hash]) {
                 hash_stat[node.response?.result[0].hash] = []
             }

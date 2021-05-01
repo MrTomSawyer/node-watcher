@@ -1,5 +1,4 @@
 'use strict'
-const { req_body, node_routes } = require('../utils/params')
 const axios = require('axios')
 
 const checkNodes = async () => {
@@ -31,7 +30,7 @@ const ping = () => {
     setTimeout(function update(){
         checkNodes()
         console.log('===================')
-        let interval = setTimeout(update, 1000 * 60 * 20)
+        setTimeout(update, 1000 * 60 * 20)
     })
 }
 
