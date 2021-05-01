@@ -63,10 +63,10 @@ const functions = {
             resent_update: `${new Date().toDateString()} ${new Date().toTimeString()}`,
             status: status.nodes_online ? 'All nodes are online' : `Some of nodes are currently offline`,
             nodes_offline: !status.nodes_online ? status.offline : null,
-            is_same_hash: hash.is_same_hash ? 'All nodes have the same hash' : 'Some nodes have different hashes',
+            is_same_hash: hash.is_same_hash ? true : false,
             hash_value: hash.is_same_hash ? hash.hash_value : 'Hash is different among modes',
             different_hashes: !hash.is_same_hash ? hash.hash_stat : null,
-            is_same_height: height.is_same_height ? 'All nodes have the same height' : 'Nodes have different heights now',
+            is_same_height: height.is_same_height ? true : false,
             height_value: height.is_same_height ? height.height_value : 'Nodes have different heights nows',
             different_heights: !height.is_same_height ? height.height_stat : null
         }
