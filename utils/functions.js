@@ -2,24 +2,16 @@ const functions = {
 
     // Возвращает объект со статусом true если все ноды онлайн и false если хотя бы одна лежит + массив лежащих IP
     isOnline(data) {
-        const status_codes = data.map(node => node.status)
+        const offline = data.filter(node => node.status === 'offline')
 
-        const all_status = status_codes.some(status => status === 'offline')
-
-        if(!all_status) return { nodes_online: true }
-        
-        const offline = data.map(node => {
-            if(node.status === 'offline') {
-                return node.host
-            }
-        })
+        if(!offline) return { nodes_online: true }
 
         return { nodes_online: false, offline }
     },
 
     // Возвращает объект со статусом true если хэши всех нод совпали. Если нет, вернет объект с false и объект вида { хэш : массив нод } с таким хэшем
     compareHash(data) {
-        const hash_list = data.map(node => node.response.result[0].hash)
+        const hash_list = data.map(node => node.response?.result[0].hash)
     
         const is_same_hash = new Set(hash_list).size === 1;
     
@@ -28,18 +20,18 @@ const functions = {
         let hash_stat = {}
     
         data.forEach(node => {
-            if(!hash_stat[node.response.result[0].hash]) {
-                hash_stat[node.response.result[0].hash] = []
+            if(!hash_stat[node.response?.result[0].hash]) {
+                hash_stat[node.response?.result[0].hash] = []
             }
     
-            hash_stat[node.response.result[0].hash].push(node.host)
+            hash_stat[node.response?.result[0].hash].push(node.host)
         })
     
         return { is_same_hash: false, hash_stat }
     },
 
     compareHeight(data) {
-        const height_list = data.map(node => node.response.result[0].height)
+        const height_list = data.map(node => node.response?.result[0].height)
     
         const is_same_height = new Set(height_list).size === 1;
     
@@ -48,11 +40,11 @@ const functions = {
         let height_stat = {}
     
         data.forEach(node => {
-            if(!height_stat[node.response.result[0].height]) {
-                height_stat[node.response.result[0].height] = []
+            if(!height_stat[node.response?.result[0].height]) {
+                height_stat[node.response?.result[0].height] = []
             }
     
-            height_stat[node.response.result[0].height].push(node.host)
+            height_stat[node.response?.result[0].height].push(node.host)
         })
     
         return { is_same_height: false, height_stat }
