@@ -10,10 +10,6 @@ class App {
         this.initControllers(controllers)
     }
 
-    initRoutes = () => {
-
-    }
-
     initControllers = (controllers) => {
         controllers.forEach(controller => this.app.use('/', controller.router))
     }
@@ -25,7 +21,7 @@ class App {
 
     listen = () => {
         this.app.listen(this.port, () => {
-            console.log(`The watcher is online and is running on port ${this.port}`)
+            console.log(`The Watcher is online and is running on port ${this.port}`)
         })
     }
 }

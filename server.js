@@ -1,6 +1,6 @@
 'use strict'
-const App = require('./App')
-const Watcher = require('./Watcher')
+const App = require('./src/App')
+const Watcher = require('./src/Watcher')
 const params = require('./utils/params')
 
 const { PORT = 3000 } = process.env
