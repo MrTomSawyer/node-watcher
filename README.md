@@ -25,14 +25,14 @@ Main node is online and working
 
 //краткий отчет о состоянии всех нод (включая важную)
 Nodes status:  {
-  resent_update: 'Sat May 01 2021 16:32:40 GMT+0700 (Красноярск, стандартное время)',
+  resent_update: 'Sat May 01 2021 17:28:59 GMT+0700 (Красноярск, стандартное время)',
   status: 'All nodes are online',
   nodes_offline: null,
-  is_same_hash: 'All nodes have the same hash',
-  "hash_value": "8b8ff0bd0d2b563d8ae9dcc8ee07d12d55b29f5dfe6a073602ef6375a133a60a",
+  is_same_hash: true,
+  hash_value: '2165243cb7d942f7a952f0f62b781ef8fa7b8e5565c7c981509a44757d05b55b',
   different_hashes: null,
-  is_same_height: 'All nodes have the same height',
-  "height_value": 1157245,
+  is_same_height: true,
+  height_value: 1157247,
   different_heights: null
 }
 ```
