@@ -4,7 +4,7 @@ const functions = {
     isOnline(data) {
         const offline = data.filter(node => node.status === 'offline')
 
-        if(!offline) return { nodes_online: true }
+        if(offline.length === 0) return { nodes_online: true }
 
         return { nodes_online: false, offline }
     },
